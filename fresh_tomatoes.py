@@ -93,8 +93,10 @@ main_page_head = '''
             font-weight: 300;
             color:#ffffff;
         }
-        .col-lg-4 {
-            max-width:32.1%;
+        @media (min-width: 1400px) {
+            .col-lg-4 {
+                max-width:32.1%;
+            }
         }
         .light {
             font-weight:300;
