@@ -2,13 +2,11 @@ import webbrowser
 import os
 import re
 
-# Styles and scripting for the page
+# CSS Styles and JavaScript scripts for the output HTML page
 main_page_head = '''
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
-
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <title>NICK CASSADY | Top 6 Movies</title>
     
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -93,11 +91,6 @@ main_page_head = '''
             font-weight: 300;
             color:#ffffff;
         }
-        @media (min-width: 1400px) {
-            .col-lg-4 {
-                max-width:32.1%;
-            }
-        }
         .light {
             font-weight:300;
         }
@@ -106,7 +99,21 @@ main_page_head = '''
             padding: 20px 0;
             border-top: solid 1px #777777;
         }
-
+        @media (min-width: 991px) {
+            .col-lg-4 {
+                max-width:32.1%;
+            }
+        }
+        @media (max-width: 765px) {
+            .navbar-social ul{
+                padding-left: 0;
+                float: left;
+            }
+                .navbar-social ul li {
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+        }
         
     </style>
     
@@ -139,7 +146,7 @@ main_page_head = '''
 </head>
 '''
 
-# The main page layout and title bar
+# The main page layout and nav bar
 main_page_content = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -161,7 +168,7 @@ main_page_content = '''
     <div class="navbar navbar-dark bg-dark">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">NICK CASSADY | <span class="light">Top 6 Movies</span></a>
+          <a class="navbar-brand" href="#">NICK CASSADY &nbsp; | &nbsp; <span class="light">Top 6 Movies</span></a>
         </div>
         <div class="navbar-social">
             <ul>
