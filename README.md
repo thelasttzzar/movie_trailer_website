@@ -20,7 +20,8 @@ All of these files are required to run the program
 ## How to run
 
 * Download or clone the full repository to your machine
-* Open entertainment_center.py in the python GUI
+* cd to the movie_trailer_website directory
+* Open Python entertainment_center.py in the python GUI
 * Run the module. Your default browser will open a new tab with the project
 
 ## Built With
